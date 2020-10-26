@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #111;
+  height: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: "MuseoSansRegular";
+  padding: 0;
+
+  @media (min-width: 500px) {
+    padding: 0 0 0 100px;
+  }
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+p {
+  font-family: "MuseoSansLight";
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+
+.content {
+  display: block;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+
+  @media (max-height: 710px) {
+    padding: 30px 15px 15px;
+    text-align: center;
+    height: auto;
+  }
+
+  @media (min-width: 1555px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+.article {
+  width: 90%;
+  margin: 0 auto 30px;
+
+  &.--base {
+    margin-top: 50px;
+
+    @media (max-height: 710px) {
+      margin-top: 20px;
+    }
+  }
+}

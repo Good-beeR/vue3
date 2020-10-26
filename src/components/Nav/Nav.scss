@@ -1,0 +1,57 @@
+.nav {
+  position: relative;
+  width: 100%;
+  height: 80px;
+
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  background: #f6f7fb;
+
+  @media (min-width: 500px) {
+    position: fixed;
+    width: 80px;
+    height: 100%;
+  }
+
+  &__item {
+    position: relative;
+    float: left;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+
+    @media (min-width: 500px) {
+      position: relative;
+      float: none;
+      width: 80px;
+      height: 80px;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      font-size: 36px;
+      text-decoration: none;
+      text-align: center;
+      line-height: 80px;
+
+      &.router-link-active, &:hover {
+        background: #8b91f1;
+
+        .icon.--active {
+          display: block;
+        }
+
+        .icon.--common {
+          display: none;
+        }
+      }
+    }
+
+    .icon.--active {
+      display: none;
+    }
+  }
+}

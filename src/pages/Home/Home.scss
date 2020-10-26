@@ -1,0 +1,24 @@
+.app-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+  font-family: "MuseoSansBold";
+  font-size: 24px;
+  font-weight: bold;
+
+  @media (min-width: 500px) {
+    font-size: 42px;
+  }
+
+  @media (min-width: 1555px) {
+    font-size: 50px;
+    display: inline-block;
+    flex: 1 1 410px;
+    max-width: 410px;
+    margin: 0 40px;
+    text-align: left;
+    vertical-align: top;
+  }
+}

@@ -1,0 +1,134 @@
+.free-app {
+  margin-top: 35px;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 30px;
+
+  @media (min-width: 1555px) {
+    flex: 1 1 960px;
+    max-width: 960px;
+  }
+
+  &__stream {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    box-shadow: -13px 0px 60px 0px rgba(0, 0, 0, 0.13);
+    border-radius: 20px;
+    z-index: 5;
+
+    @media (min-width: 910px) {
+      width: 461px;
+    }
+
+    #cmtBox1, #cmtBox2 {
+      display: block;
+      width: 100%;
+      height: 350px;
+
+      @media (min-width: 910px) {
+        width: 460px;
+      }
+    }
+
+    #cmtBox1 {
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+      background: #fd69a4;
+      background: linear-gradient(135deg, #fd69a4 0%, #fdbe69 100%);
+    }
+
+    #cmtBox2 {
+      border-radius: 0 0 20px 20px;
+      overflow: hidden;
+      background: #fff;
+    }
+  }
+
+  &__chat {
+    position: relative;
+    vertical-align: top;
+
+    width: 100%;
+    height: 510px;
+    margin: 10px 0 0 0;
+    background: #f6f7fb;
+    display: inline-block;
+    border-radius: 20px;
+
+    @media (min-width: 910px) {
+      width: 495px;
+      height: 700px;
+      margin-left: -15px;
+      padding-left: 15px;
+      border-radius: 0 20px 20px 0;
+    }
+  }
+}
+
+.free-app-control {
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.app-button {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 15px;
+  margin: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  font-family: "MuseoSansBold";
+  border-radius: 20px;
+  cursor: pointer;
+
+  &--start {
+    background: #1241f4;
+  }
+
+  &--stop {
+    background: #dd3f4a;
+    display: none;
+  }
+
+  &--next {
+    background: #3be32b;
+    display: none;
+  }
+}
+
+.free-app-messages {
+  padding: 0 25px;
+  height: 350px;
+
+  @media (min-width: 910px) {
+    height: 540px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0 20px;
+    font-family: "MuseoSansLight";
+    background: #fff;
+    border-radius: 20px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+  }
+
+  &__container {
+    height: 100%;
+  }
+}
+
+.free-app-settings {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background: url("/src/assets/icon/settings.svg");
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  cursor: pointer;
+}
