@@ -10,7 +10,6 @@
   import {defineComponent, onMounted} from "vue";
   import {useStore} from "vuex";
   import '@/pages/Girls/Girls.scss';
-  import {loadAsync} from "@/shared/utils/loadAsync";
 
   export default defineComponent({
     name: "Girls",
@@ -19,9 +18,12 @@
       const content = store.getters.currentPageContent.content;
 
       onMounted(() => {
-          loadAsync('https://iframe.coomeet.com/js/code.js', () => {
-
-          });
+        const script = document.createElement('script');
+        script.onload = function() {
+          console.log('coomeet app init')
+        };
+        script.src = "https://iframe.coomeet.com/js/code.js";
+        document.getElementsByTagName('head')[0].appendChild(script);
       });
 
       return {

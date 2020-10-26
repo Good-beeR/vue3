@@ -3,7 +3,7 @@ import * as types from '@/shared/const/store.types'
 import {createStore, ActionTree, MutationTree, GetterTree } from 'vuex'
 import {useRouter} from "vue-router";
 import {reactive} from "vue";
-import {IIconDate, IPageDate, IStoreState} from "@/types/types";
+import {IIconDate, IPageDate, IStoreState} from "@/types";
 
 const state: IStoreState = {
   pageState: [],
@@ -35,7 +35,7 @@ const mutations: MutationTree<IStoreState> = {
   }
 }
 
-const actions: ActionTree<IStoreState, any> = {
+const actions: ActionTree<IStoreState, IStoreState> = {
   [types.GET_PAGE_REQUEST]({commit}, name: string) {
     return new Promise((resolve, reject) => {
       axios
@@ -51,10 +51,10 @@ const actions: ActionTree<IStoreState, any> = {
         });
     })
   },
-  [types.GET_NAV_DATE]({commit}: any, date: IIconDate[]) {
+  [types.GET_NAV_DATE]({commit}, date: IIconDate[]) {
     commit(types.SET_NAV_CONTENT, date);
   },
-  [types.CHANGE_LOADING_STATE]({commit}: any, value: boolean) {
+  [types.CHANGE_LOADING_STATE]({commit}, value: boolean) {
     commit(types.SET_LOADING_STATE, value);
   }
 }

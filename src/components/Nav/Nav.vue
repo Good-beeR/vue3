@@ -9,7 +9,7 @@ nav.nav
 <script lang="ts">
   import '@/components/Nav/Nav.scss'
   import {defineComponent, PropType} from "vue";
-  import {IIconDate} from "@/types/types";
+  import {IIconDate} from "@/types";
   import Icon from "@/components/Icon/Icon.vue";
 
   export default defineComponent({

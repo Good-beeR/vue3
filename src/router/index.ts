@@ -4,7 +4,7 @@ import Girls from "@/pages/Girls/Girls.vue";
 import Privacy from "@/pages/Privacy/Privacy.vue";
 import Rules from "@/pages/Rules/Rules.vue";
 import PageNotFound from "@/pages/PageNotFound/PageNotFound.vue";
-import {store} from "@/store/store";
+import {store} from "@/store";
 import * as types from "@/shared/const/store.types";
 
 const appStore = store;
