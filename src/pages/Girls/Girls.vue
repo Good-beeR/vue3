@@ -7,12 +7,12 @@
 </template>
 
 <script lang="ts">
-  import {defineComponent, onMounted} from "vue";
-  import {useStore} from "vuex";
+  import {defineComponent, onMounted} from 'vue';
+  import {useStore} from 'vuex';
   import '@/pages/Girls/Girls.scss';
 
   export default defineComponent({
-    name: "Girls",
+    name: 'Girls',
     setup() {
       const store = useStore();
       const content = store.getters.currentPageContent.content;
@@ -22,7 +22,7 @@
         script.onload = function() {
           console.log('coomeet app init')
         };
-        script.src = "https://iframe.coomeet.com/js/code.js";
+        script.src = 'https://iframe.coomeet.com/js/code.js';
         document.getElementsByTagName('head')[0].appendChild(script);
       });
 

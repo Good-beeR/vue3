@@ -16,9 +16,9 @@
 
 <script lang="ts">
   import '@/components/FreeApp/FreeApp.scss';
-  import {defineComponent} from "vue";
+  import {defineComponent} from 'vue';
 
   export default defineComponent({
-    name: "FreeApp",
+    name: 'FreeApp',
   });
 </script>

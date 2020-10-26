@@ -3,14 +3,14 @@ Nav(:iconDate="IconDate")
 </template>
 
 <script lang="ts">
-  import {defineComponent} from "vue";
-  import Nav from "@/components/Nav/Nav.vue";
-  import {useStore} from "vuex";
-  import {GET_NAV_DATE} from "@/shared/const/store.types";
-  import {navDate} from "@/shared/const/navDate";
+  import {defineComponent} from 'vue';
+  import Nav from '@/components/Nav/Nav.vue';
+  import {useStore} from 'vuex';
+  import {GET_NAV_DATE} from '@/shared/const/store.types';
+  import {navDate} from '@/shared/const/navDate';
 
   export default defineComponent({
-    name: "NavLayout",
+    name: 'NavLayout',
     components: {Nav},
 
     setup() {

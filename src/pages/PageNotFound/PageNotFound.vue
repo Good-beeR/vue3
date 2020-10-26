@@ -5,11 +5,11 @@
 
 <script lang="ts">
   import '@/pages/PageNotFound/PageNotFound.scss';
-  import {defineComponent} from "vue";
-  import {useStore} from "vuex";
+  import {defineComponent} from 'vue';
+  import {useStore} from 'vuex';
 
   export default defineComponent({
-    name: "PageNotFound",
+    name: 'PageNotFound',
     setup() {
 
       const store = useStore();

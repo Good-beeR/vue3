@@ -1,4 +1,4 @@
-import {IIconDate} from "@/types";
+import {IIconDate} from '@/types';
 
 export const navDate = ([
   {

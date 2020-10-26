@@ -1,42 +1,42 @@
-import {createWebHistory, createRouter} from "vue-router";
-import Home from "@/pages/Home/Home.vue";
-import Girls from "@/pages/Girls/Girls.vue";
-import Privacy from "@/pages/Privacy/Privacy.vue";
-import Rules from "@/pages/Rules/Rules.vue";
-import PageNotFound from "@/pages/PageNotFound/PageNotFound.vue";
-import {store} from "@/store";
-import * as types from "@/shared/const/store.types";
+import {createWebHistory, createRouter} from 'vue-router';
+import Home from '@/pages/Home/Home.vue';
+import Girls from '@/pages/Girls/Girls.vue';
+import Privacy from '@/pages/Privacy/Privacy.vue';
+import Rules from '@/pages/Rules/Rules.vue';
+import PageNotFound from '@/pages/PageNotFound/PageNotFound.vue';
+import {store} from '@/store';
+import * as types from '@/shared/const/store.types';
 
 const appStore = store;
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: Home,
     props: true,
   },
   {
-    path: "/girls",
-    name: "Girls",
+    path: '/girls',
+    name: 'Girls',
     component: Girls,
     props: true,
   },
   {
-    path: "/privacy",
-    name: "Privacy",
+    path: '/privacy',
+    name: 'Privacy',
     component: Privacy,
     props: true,
   },
   {
-    path: "/rules",
-    name: "Rules",
+    path: '/rules',
+    name: 'Rules',
     component: Rules,
     props: true,
   },
   {
-    path: "/:catchAll(.*)",
-    name: "NotFound",
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
     component: PageNotFound
   }
 ];

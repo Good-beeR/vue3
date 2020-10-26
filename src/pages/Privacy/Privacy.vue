@@ -1,11 +1,11 @@
 <template lang="pug" src="../../shared/pages/BasePage.pug"></template>
 
 <script lang="ts">
-  import {defineComponent} from "vue";
-  import {useStore} from "vuex";
+  import {defineComponent} from 'vue';
+  import {useStore} from 'vuex';
 
   export default defineComponent({
-    name: "Privacy",
+    name: 'Privacy',
     setup() {
 
       const store = useStore();

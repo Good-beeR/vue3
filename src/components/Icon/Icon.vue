@@ -4,10 +4,10 @@ i.icon(:style="{background: 'url(' + icon + ')', backgroundRepeat: 'no-repeat', 
 
 <script lang="ts">
   import '@/components/Icon/Icon.scss';
-  import {defineComponent} from "vue";
+  import {defineComponent} from 'vue';
 
   export default defineComponent({
-    name: "Icon",
+    name: 'Icon',
     props: {
       icon: String,
     }

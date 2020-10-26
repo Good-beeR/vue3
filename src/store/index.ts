@@ -1,9 +1,9 @@
 import axios from 'axios'
 import * as types from '@/shared/const/store.types'
-import {createStore, ActionTree, MutationTree, GetterTree } from 'vuex'
-import {useRouter} from "vue-router";
-import {reactive} from "vue";
-import {IIconDate, IPageDate, IStoreState} from "@/types";
+import {createStore, ActionTree, MutationTree, GetterTree } from 'vuex';
+import {useRouter} from 'vue-router';
+import {reactive} from 'vue';
+import {IIconDate, IPageDate, IStoreState} from '@/types';
 
 const state: IStoreState = {
   pageState: [],

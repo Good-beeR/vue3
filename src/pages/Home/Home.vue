@@ -7,13 +7,13 @@
 </template>
 
 <script lang="ts">
-  import {defineComponent} from "vue";
-  import {useStore} from "vuex";
+  import {defineComponent} from 'vue';
+  import {useStore} from 'vuex';
   import '@/pages/Home/Home.scss';
-  import FreeApp from "@/components/FreeApp/FreeApp.vue";
+  import FreeApp from '@/components/FreeApp/FreeApp.vue';
 
   export default defineComponent({
-    name: "Home",
+    name: 'Home',
     components: {FreeApp},
     setup() {
       const store = useStore();
