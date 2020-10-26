@@ -15,11 +15,10 @@ const getters: GetterTree<IStoreState, IStoreState> = {
   currentPageContent(state: IStoreState) {
     //TODO: possibly there is a smarter way than using useRouter()
     const pageName = useRouter().currentRoute.value.name;
-    //console.log(state.pageState);
-    return state.pageState.find(ell => ell.name == pageName);
+    return state.pageState.find(item => item.name == pageName);
   },
   pageContentIsFound: (state: IStoreState) => (name: string) => {
-    return !!state.pageState.find(ell => ell.name == name);
+    return !!state.pageState.find(item => item.name == name);
   }
 }
 
