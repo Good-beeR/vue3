@@ -1,8 +1,0 @@
-export function loadAsync(u:string, c: any) {
-  const d = document, t = 'script',
-    o = d.createElement(t),
-    s: any = d.getElementsByTagName(t)[0];
-  o.src = u;
-  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-  s.parentNode.insertBefore(o, s);
-}
