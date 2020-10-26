@@ -1,11 +1,11 @@
 import {createWebHistory, createRouter} from "vue-router";
-import Home from "../pages/Home/Home.vue";
-import Girls from "../pages/Girls/Girls.vue";
-import Privacy from "../pages/Privacy/Privacy.vue";
-import Rules from "../pages/Rules/Rules.vue";
-import PageNotFound from "../pages/PageNotFound/PageNotFound.vue";
-import {store} from "../store/store";
-import * as types from "../shared/const/store.types";
+import Home from "@/pages/Home/Home.vue";
+import Girls from "@/pages/Girls/Girls.vue";
+import Privacy from "@/pages/Privacy/Privacy.vue";
+import Rules from "@/pages/Rules/Rules.vue";
+import PageNotFound from "@/pages/PageNotFound/PageNotFound.vue";
+import {store} from "@/store/store";
+import * as types from "@/shared/const/store.types";
 
 const appStore = store;
 

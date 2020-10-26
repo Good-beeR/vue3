@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-  import './Preloader.scss';
+  import '@/components/Preloader/Preloader.scss';
   import {defineComponent} from "vue";
 
   export default defineComponent({

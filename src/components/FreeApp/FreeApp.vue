@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-  import './FreeApp.scss';
+  import '@/components/FreeApp/FreeApp.scss';
   import {defineComponent} from "vue";
 
   export default defineComponent({

@@ -6,10 +6,10 @@ Preloader(v-show="isLoading")
 </template>
 
 <script lang="ts">
-  import './App.scss'
+  import '@/App.scss'
   import {defineComponent, computed} from "vue";
-  import NavLayout from "./containers/NavLayout/NavLayout.vue";
-  import Preloader from "./components/Preloader/Preloader.vue";
+  import NavLayout from "@/containers/NavLayout/NavLayout.vue";
+  import Preloader from "@/components/Preloader/Preloader.vue";
   import {useStore} from "vuex";
 
   export default defineComponent({

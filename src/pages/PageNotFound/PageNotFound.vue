@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-  import './PageNotFound.scss';
+  import '@/pages/PageNotFound/PageNotFound.scss';
   import {defineComponent} from "vue";
   import {useStore} from "vuex";
 

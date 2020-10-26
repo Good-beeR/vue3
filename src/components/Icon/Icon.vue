@@ -3,7 +3,7 @@ i.icon(:style="{background: 'url(' + icon + ')', backgroundRepeat: 'no-repeat', 
 </template>
 
 <script lang="ts">
-  import './Icon.scss';
+  import '@/components/Icon/Icon.scss';
   import {defineComponent} from "vue";
 
   export default defineComponent({

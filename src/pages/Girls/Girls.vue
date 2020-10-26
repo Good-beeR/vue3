@@ -7,10 +7,10 @@
 </template>
 
 <script lang="ts">
-  import {defineComponent, onMounted, ref} from "vue";
+  import {defineComponent, onMounted} from "vue";
   import {useStore} from "vuex";
-  import './Girls.scss';
-  import {loadAsync} from "../../shared/utils/loadAsync";
+  import '@/pages/Girls/Girls.scss';
+  import {loadAsync} from "@/shared/utils/loadAsync";
 
   export default defineComponent({
     name: "Girls",

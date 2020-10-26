@@ -7,10 +7,10 @@ nav.nav
 </template>
 
 <script lang="ts">
-  import './Nav.scss'
+  import '@/components/Nav/Nav.scss'
   import {defineComponent, PropType} from "vue";
-  import Icon from "../Icon/Icon.vue";
-  import {IIconDate} from "../../types/types";
+  import {IIconDate} from "@/types/types";
+  import Icon from "@/components/Icon/Icon.vue";
 
   export default defineComponent({
     name: "Nav",
