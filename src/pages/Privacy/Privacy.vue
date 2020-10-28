@@ -2,14 +2,14 @@
 
 <script lang="ts">
   import {defineComponent} from 'vue';
-  import {useStore} from 'vuex';
+  import {useStore} from '@/store';
 
   export default defineComponent({
     name: 'Privacy',
     setup() {
 
       const store = useStore();
-      const content = store.getters.currentPageContent.content;
+      const content = store.getters.currentPageDate.content;
 
       return {
         store,

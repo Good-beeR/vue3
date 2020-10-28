@@ -5,9 +5,10 @@ Nav(:iconDate="IconDate")
 <script lang="ts">
   import {defineComponent} from 'vue';
   import Nav from '@/components/Nav/Nav.vue';
-  import {useStore} from 'vuex';
+
   import {GET_NAV_DATE} from '@/shared/const/store.types';
   import {navDate} from '@/shared/const/navDate';
+  import {useStore} from '@/store';
 
   export default defineComponent({
     name: 'NavLayout',
@@ -16,7 +17,7 @@ Nav(:iconDate="IconDate")
     setup() {
       const store = useStore();
       store.dispatch(GET_NAV_DATE, navDate);
-      const IconDate = useStore().state.navState;
+      const IconDate = store.state.navState;
 
       return {
         IconDate

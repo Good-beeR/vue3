@@ -10,7 +10,7 @@ Preloader(v-show="isLoading")
   import {defineComponent, computed} from "vue";
   import NavLayout from "@/containers/NavLayout/NavLayout.vue";
   import Preloader from "@/components/Preloader/Preloader.vue";
-  import {useStore} from "vuex";
+  import {useStore} from '@/store';
 
   export default defineComponent({
     name: "App",
