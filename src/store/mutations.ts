@@ -11,6 +11,6 @@ export const mutations: MutationTree<IStoreState> = {
     state.navState = reactive(date);
   },
   [types.SET_LOADING_STATE](state: IStoreState, value: boolean) {
-    state.isLoading = value
+    state.isLoading = value;
   }
-}
+};

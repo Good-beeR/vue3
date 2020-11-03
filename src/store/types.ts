@@ -7,7 +7,7 @@ export type TGettersPageContent = {
 }
 
 export type TGetters = {
-  currentPageDate(state: IStoreState): IPageDate
+  getCurrentPageDate(state: IStoreState): IPageDate
   pageContentIsFound(state: IStoreState): TGettersPageContent
   getStateNavState(state: IStoreState): IIconDate[]
   getStateLoadingState(state: IStoreState): boolean

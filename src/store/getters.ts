@@ -1,11 +1,12 @@
 import {GetterTree} from 'vuex';
 import {IIconDate, IPageDate, IStoreState} from '@/types';
 import {useRouter} from 'vue-router';
+import {PAGE_404_NAME} from '@/shared/const/urlConst';
 
 export const getters: GetterTree<IStoreState, IStoreState> = {
-  currentPageDate(state: IStoreState): IPageDate {
+  getCurrentPageDate(state: IStoreState): IPageDate {
     const currentRouteName = useRouter().currentRoute.value.name;
-    const pageName = currentRouteName ? String(currentRouteName) : 'NotFound';
+    const pageName = currentRouteName ? String(currentRouteName) : PAGE_404_NAME;
     return state.pageState.filter(item => item.name == pageName)[0];
   },
   pageContentIsFound: (state: IStoreState) => (name: string): boolean => {
@@ -17,4 +18,4 @@ export const getters: GetterTree<IStoreState, IStoreState> = {
   getStateLoadingState(state: IStoreState): boolean {
     return state.isLoading;
   }
-}
+};

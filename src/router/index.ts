@@ -5,7 +5,7 @@ import Privacy from '@/pages/Privacy/Privacy.vue';
 import Rules from '@/pages/Rules/Rules.vue';
 import PageNotFound from '@/pages/PageNotFound/PageNotFound.vue';
 import {vuexStore} from '@/repositories';
-
+import {PAGE_404_NAME} from '@/shared/const/urlConst';
 
 const routes = [
   {
@@ -34,7 +34,7 @@ const routes = [
   },
   {
     path: '/:catchAll(.*)',
-    name: 'NotFound',
+    name: PAGE_404_NAME,
     component: PageNotFound
   }
 ];
@@ -45,7 +45,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const name = to.name ? String(to.name) : 'NotFound';
+  const name = to.name ? String(to.name) : PAGE_404_NAME;
 
   const isPageDateExist = vuexStore.isPageExist(name);
 

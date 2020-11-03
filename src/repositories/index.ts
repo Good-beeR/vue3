@@ -22,7 +22,7 @@ class VuexRepository implements IVuexRepository {
   }
   // Getters
   getCurrentPageContent(): IPageContentDate {
-    return this.store.getters.currentPageDate.content;
+    return this.store.getters.getCurrentPageDate.content;
   }
   getNavList(): IIconDate[] {
     return this.store.getters.getStateNavState;
