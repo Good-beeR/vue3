@@ -8,15 +8,12 @@
 
 <script lang="ts">
   import {defineComponent, onMounted} from 'vue';
-  import {useStore} from '@/store';
   import '@/pages/Girls/Girls.scss';
+  import {vuexStore} from '@/repositories';
 
   export default defineComponent({
     name: 'Girls',
     setup() {
-      const store = useStore();
-      const content = store.getters.currentPageDate.content;
-
       onMounted(() => {
         const script = document.createElement('script');
         script.src = 'https://iframe.coomeet.com/js/code.js';
@@ -24,8 +21,7 @@
       });
 
       return {
-        store,
-        content,
+        content: vuexStore.getCurrentPageContent()
       }
     },
   });

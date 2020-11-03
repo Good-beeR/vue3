@@ -4,10 +4,8 @@ import Girls from '@/pages/Girls/Girls.vue';
 import Privacy from '@/pages/Privacy/Privacy.vue';
 import Rules from '@/pages/Rules/Rules.vue';
 import PageNotFound from '@/pages/PageNotFound/PageNotFound.vue';
-import {useStore} from '@/store';
-import * as types from '@/shared/const/store.types';
+import {vuexStore} from '@/repositories';
 
-const appStore = useStore();
 
 const routes = [
   {
@@ -47,19 +45,19 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-
   const name = to.name ? String(to.name) : 'NotFound';
 
-  const pageDateIsAvailability = appStore.getters.pageContentIsFound(name);
-  if (!pageDateIsAvailability) {
-    appStore.dispatch(types.CHANGE_LOADING_STATE, true);
-    appStore.dispatch(types.GET_PAGE_REQUEST, name).then(() => {
+  const isPageDateExist = vuexStore.isPageExist(name);
+
+  if (!isPageDateExist) {
+    vuexStore.changeLoadingState(true);
+    vuexStore.getPageContent(name).then(() => {
         next();
-        appStore.dispatch(types.CHANGE_LOADING_STATE, false);
+        vuexStore.changeLoadingState(false);
       }
     ).catch(() => {
       next({path: from.fullPath});
-      appStore.dispatch(types.CHANGE_LOADING_STATE, false);
+      vuexStore.changeLoadingState(false);
     });
   } else {
     next();

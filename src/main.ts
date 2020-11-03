@@ -3,6 +3,6 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from '@/App.vue'
 import router from '@/router'
-import {useStore} from '@/store';
+import {vuexStore} from '@/repositories';
 
-createApp(App).use(useStore()).use(router).use(VueAxios, axios).mount('#app');
+createApp(App).use(vuexStore.store).use(router).use(VueAxios, axios).mount('#app');

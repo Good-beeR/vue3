@@ -6,18 +6,14 @@
 <script lang="ts">
   import '@/pages/PageNotFound/PageNotFound.scss';
   import {defineComponent} from 'vue';
-  import {useStore} from '@/store';
+  import {vuexStore} from '@/repositories';
 
   export default defineComponent({
     name: 'PageNotFound',
     setup() {
 
-      const store = useStore();
-      const content = store.getters.currentPageDate.content;
-
       return {
-        store,
-        content
+        content: vuexStore.getCurrentPageContent()
       }
     }
   });

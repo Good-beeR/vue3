@@ -8,20 +8,17 @@
 
 <script lang="ts">
   import {defineComponent} from 'vue';
-  import {useStore} from '@/store';
   import '@/pages/Home/Home.scss';
   import FreeApp from '@/components/FreeApp/FreeApp.vue';
+  import {vuexStore} from '@/repositories';
 
   export default defineComponent({
     name: 'Home',
     components: {FreeApp},
     setup() {
-      const store = useStore();
-      const content = store.getters.currentPageDate.content;
 
       return {
-        store,
-        content
+        content: vuexStore.getCurrentPageContent()
       }
     }
   });

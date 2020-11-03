@@ -1,10 +1,9 @@
 import {ActionTree} from 'vuex';
 import {IIconDate, IPageDate, IStoreState} from '@/types';
-import {IActionsList} from '@/store/types';
 import * as types from '@/shared/const/store.types';
 import axios, {AxiosResponse} from 'axios';
 
-export const actions: ActionTree<IStoreState, IStoreState> & IActionsList = {
+export const actions: ActionTree<IStoreState, IStoreState> = {
   [types.GET_PAGE_REQUEST]({commit}, name: string) {
     return new Promise((resolve, reject) => {
       axios
