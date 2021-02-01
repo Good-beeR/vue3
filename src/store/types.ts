@@ -6,11 +6,15 @@ export type TGettersPageContent = {
   (name: string): boolean;
 }
 
+export type TGettersPageDate = {
+  (name: string): IPageDate;
+}
+
 export type TGetters = {
-  getCurrentPageDate(state: IStoreState): IPageDate
+  getPageDate(state: IStoreState): TGettersPageDate
   pageContentIsFound(state: IStoreState): TGettersPageContent
-  getStateNavState(state: IStoreState): IIconDate[]
-  getStateLoadingState(state: IStoreState): boolean
+  getNavState(state: IStoreState): IIconDate[]
+  getStoreLoadingState(state: IStoreState): boolean
 }
 
 export type TMutations<S = IStoreState> = {

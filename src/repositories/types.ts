@@ -3,9 +3,9 @@ import {IIconDate, IPageContentDate, IPageDate} from '@/types';
 export interface IVuexRepository {
   setNavList(payload: IIconDate[]): void;
   getNavList(): IIconDate[];
-  getPageContent(payload: string): Promise<IPageDate>;
+  loadPage(payload: string): Promise<IPageDate>;
   changeLoadingState(payload: boolean): void;
-  getCurrentPageContent(): IPageContentDate;
+  getPage(name: string): IPageContentDate;
   getLoadingState(): boolean;
   isPageExist(name: string): boolean;
 }

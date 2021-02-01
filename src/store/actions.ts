@@ -13,9 +13,8 @@ export const actions: ActionTree<IStoreState, IStoreState> = {
         commit(types.SET_CONTENT, pageDate);
         resolve(response.data);
       })
-        .catch(error => {
-          console.log(error);
-          reject(error);
+        .catch((error: AxiosResponse<IPageDate>) => {
+          reject(error.data);
         });
     })
   },

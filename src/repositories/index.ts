@@ -17,18 +17,19 @@ class VuexRepository implements IVuexRepository {
   changeLoadingState(payload: boolean) {
     this.store.dispatch(CHANGE_LOADING_STATE, payload);
   }
-  getPageContent(payload: string): Promise<IPageDate> {
+  loadPage(payload: string): Promise<IPageDate> {
     return this.store.dispatch(GET_PAGE_REQUEST, payload);
   }
   // Getters
-  getCurrentPageContent(): IPageContentDate {
-    return this.store.getters.getCurrentPageDate.content;
+  getPage(name: string): IPageContentDate {
+    const pageContent = this.store.getters.getPageDate(name);
+    return pageContent.content;
   }
   getNavList(): IIconDate[] {
-    return this.store.getters.getStateNavState;
+    return this.store.getters.getNavState;
   }
   getLoadingState(): boolean {
-    return this.store.getters.getStateLoadingState;
+    return this.store.getters.getStoreLoadingState;
   }
   isPageExist(name: string): boolean {
     return this.store.getters.pageContentIsFound(name);

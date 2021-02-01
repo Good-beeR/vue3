@@ -1,0 +1,10 @@
+.pay-app {
+  width: auto !important;
+  height: 640px !important;
+
+  background: rgba(165, 165, 165, 0.7);
+
+  @media screen and (min-width: 900px) {
+    min-height: 580px;
+  }
+}

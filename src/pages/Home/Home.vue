@@ -7,18 +7,26 @@
 </template>
 
 <script lang="ts">
-  import {defineComponent} from 'vue';
+  import {defineComponent, onBeforeMount, ref} from 'vue';
   import '@/pages/Home/Home.scss';
   import FreeApp from '@/components/FreeApp/FreeApp.vue';
-  import {vuexStore} from '@/repositories';
+  import getPostData from '@/composition/compositionGetPostDate';
+  import {initDate} from '@/shared/const/initDate';
 
   export default defineComponent({
     name: 'Home',
     components: {FreeApp},
+
     setup() {
+      const content = ref(initDate);
+      const getPost = async () => {
+        content.value = await getPostData();
+      }
+
+      onBeforeMount (getPost);
 
       return {
-        content: vuexStore.getCurrentPageContent()
+        content
       }
     }
   });

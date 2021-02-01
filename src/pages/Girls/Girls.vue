@@ -1,27 +1,31 @@
 <template lang="pug">
 .coomeet-over
   .app-over
-    #coomeet_container.pay-app
+    PayApp
     h1 {{content.title}}
   .article(v-html="content.pageContent")
 </template>
 
 <script lang="ts">
-  import {defineComponent, onMounted} from 'vue';
+  import {defineComponent, onBeforeMount, ref} from 'vue';
   import '@/pages/Girls/Girls.scss';
-  import {vuexStore} from '@/repositories';
+  import {initDate} from '@/shared/const/initDate';
+  import getPostData from '@/composition/compositionGetPostDate';
+  import PayApp from '@/components/PayApp/PayApp.vue';
 
   export default defineComponent({
     name: 'Girls',
+    components: {PayApp},
     setup() {
-      onMounted(() => {
-        const script = document.createElement('script');
-        script.src = 'https://iframe.coomeet.com/js/code.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-      });
+      const content = ref(initDate);
+      const getPost = async () => {
+        content.value = await getPostData();
+      }
+
+      onBeforeMount (getPost);
 
       return {
-        content: vuexStore.getCurrentPageContent()
+        content
       }
     },
   });

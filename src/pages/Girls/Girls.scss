@@ -26,14 +26,3 @@
   width: 100%;
   min-height: 580px;
 }
-
-.pay-app {
-  width: auto !important;
-  height: 640px !important;
-
-  background: rgb(246, 247, 251);
-
-  @media screen and (min-width: 900px) {
-    min-height: 580px;
-  }
-}
